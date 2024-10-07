@@ -6,15 +6,15 @@ module "s3" {
   source = "git@bitbucket.org:mediaiq/iac-terraform-aws-s3.git"
   // inputs for tagging
   mandatory_tags = {
-    TEAM        = "devops"
+    TEAM        = "test"
     DEPARTMENT  = "tech"
-    OWNER       = "devops"
+    OWNER       = "test"
     FUNCTION    = "test"
     PRODUCT     = "test"
     ENVIRONMENT = "test"
   }
   // inputs for s3
-  bucket_name = "miq-iac-test-terraform"
+  bucket_name = "iac-test-terraform"
   server_side_encryption_configuration = {
     rule = {
       apply_server_side_encryption_by_default = {
